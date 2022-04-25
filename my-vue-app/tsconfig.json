@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "useDefineForClassFields": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "strict": true,
+    "jsx": "preserve",
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "isolatedModules": false,
+    "esModuleInterop": true,
+    "lib": ["esnext", "dom"],
+    "allowJs": true, 
+    "noImplicitAny": false, 
+    "baseUrl": ".",
+    "types": ["vite/client"],
+    // 允许从没有设置默认导出的模块中默认导入。这并不影响代码的输出，仅为了类型检查。
+    "allowSyntheticDefaultImports": true,
+    // 模块名到基于 baseUrl的路径映射的列表。
+    "paths": {
+        "@/*":[
+            "src/*",
+        ],
+        "#/*": ["types/*"]
+    },
+  },
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}
